@@ -1,0 +1,10 @@
+<h1>Nominate a Book</h1>
+ 
+<div class="col-md-4"><label for="title">Title: </label> <input type="text" id="title" ng-model="title" /><div>
+<div class="col-md-4"><label for="author">Author: </label> <input type="text" id="author" ng-model="author" /></div>
+<div class="col-md-4"><label for="description">Description: </label> <textarea rows="5" cols="40" id="description" ng-model="description"> </textarea></div>
+<div class="col-md-4"><label for="nominatedby">Nominated By: </label> <input type="text" id="nominatedBy" ng-model="nominatedBy" /></div>
+<div class="col-md-4"><label for="nominatedDate">Nominated Date: </label> <input type="date" id="nominatedDate" ng-model="nominatedDate" /></div>
+
+<input type="button" class="btn btn-sm btn-success" name="AddBookButton" value="Add Book" ng-click="AddBookClick()" />
+<input type="button" class="btn btn-sm btn-default" name="CancelButton" value="Cancel" ng-click="go('/BookList')" />

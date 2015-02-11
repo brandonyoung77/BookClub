@@ -1,0 +1,26 @@
+<div>
+	<h1>Nominations list</h1>
+	<div>
+		<label for="StartDate">From:</label>
+		<input type="date" id="StartDate" ng-model="StartDate" />
+		<label for="EndDate">To:</label>
+		<input type="date" id="EndDate" ng-model="EndDate" />
+		<input type="button" class="btn btn-sm btn-default" name="Refresh" value="Refresh" ng-click="LoadBooks()" />
+		<input type="button" class="btn btn-sm btn-default" name="AddBookButton" value="Add Book" ng-click="go('/AddBook')" />
+	</div>
+	
+	<br/>
+	<div class="container-fluid" ng-repeat="nomination in nominations | orderBy:'NominationDate'">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<span class="panel-title">{{nomination.Title}} by {{nomination.Author}}</span>
+				<div class="panel-heading">
+						<span >Nominated by {{nomination.NominatedBy}} on {{nomination.NominationDate.toString("MM-dd-yyyy")}}</span>
+				</div>
+			</div>
+			<div class="panel-body book-description">{{nomination.Description}}</div>
+		</div>
+	</div>
+	<br/>
+	<input type="button" class="btn btn-sm btn-default" name="AddBookButton" value="Add Book" ng-click="go('/AddBook')" />
+</div>
