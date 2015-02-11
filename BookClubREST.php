@@ -36,8 +36,6 @@ switch($_SERVER['REQUEST_METHOD'])
 		$Nominations->Description =$_REQUEST["description"];
 		$Nominations->NominatedBy =$_REQUEST["nominatedby"];
 		$Nominations->NominationDate =  json_decode($_REQUEST["nominatedDate"]);
-		echo "_REQUEST";
-		echo var_dump($_REQUEST);
 		}
 		else
 		{
