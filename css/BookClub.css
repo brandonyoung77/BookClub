@@ -2,3 +2,6 @@
      display:none;
 }
 
+.book-description {
+	white-space:pre-wrap;
+}
